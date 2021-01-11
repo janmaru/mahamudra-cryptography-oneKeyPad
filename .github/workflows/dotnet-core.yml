@@ -27,8 +27,8 @@ jobs:
         run: PARALLELDOTS_KEY=${{secrets.PARALLELDOTS_KEY}} dotnet test --no-restore --verbosity normal
 
       # Publish Core
-      - name: publish Core
-        id: publish_nuget
+      - name: publish OneKeyPad
+        id: publish_nuget_onekeypad
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -63,8 +63,8 @@ jobs:
 
 
       # Publish Guard
-      - name: publish Guard
-        id: publish_nuget_guard
+      - name: publish ParallelDots
+        id: publish_nuget_paralleldots
         uses: rohith/publish-nuget@v2
         with:
             # Filepath of the project to be packaged, relative to root of repository
