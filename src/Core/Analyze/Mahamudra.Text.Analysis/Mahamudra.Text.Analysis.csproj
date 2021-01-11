@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Mahamudra.Text.Analysis</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Additions\Mahamudra.ParallelDots\Mahamudra.ParallelDots.csproj" />
+    <ProjectReference Include="..\..\Random\Mahamudra.Cryptography.Random\Mahamudra.Cryptography.Random.csproj" />
+  </ItemGroup>
+
+</Project>
