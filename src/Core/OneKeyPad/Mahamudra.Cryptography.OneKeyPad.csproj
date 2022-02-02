@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk"> 
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
 		<RootNamespace>Mahamudra.Cryptography.OneKeyPad</RootNamespace>
@@ -11,7 +11,8 @@
 		<PackageIcon>lotus-flower.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/janmaru/mahamudra-cryptography-oneKeyPad</RepositoryUrl> 
+		<RepositoryUrl>https://github.com/janmaru/mahamudra-cryptography-oneKeyPad</RepositoryUrl>
+		<IsPackable>true</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -20,7 +21,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-	</ItemGroup> 
+	</ItemGroup>
 
 	<ItemGroup>
 		<Content Include="lotus-flower.png">
