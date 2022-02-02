@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using SysRnd = System.Random;
 
 namespace Mahamudra.Cryptography.Random
@@ -26,8 +25,8 @@ namespace Mahamudra.Cryptography.Random
             char offsetLowerCase = 'a';
             char offsetUpperCase = 'A';
             const int lettersOffset = 26; // A...Z or a..z: length=26  
-            Func<char> lowerLetter = () => (char)_random.Next(offsetLowerCase, offsetLowerCase + lettersOffset);
-            Func<char> upperLetter = () => (char)_random.Next(offsetUpperCase, offsetUpperCase + lettersOffset);
+            char lowerLetter() => (char)_random.Next(offsetLowerCase, offsetLowerCase + lettersOffset);
+            char upperLetter() => (char)_random.Next(offsetUpperCase, offsetUpperCase + lettersOffset);
 
             for (var i = 0; i < size; i++)
             {

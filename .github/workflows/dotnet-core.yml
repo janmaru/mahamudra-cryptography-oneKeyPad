@@ -62,7 +62,7 @@ jobs:
           INCLUDE_SYMBOLS: false
 
 
-      # Publish Guard
+      # Publish ParallelDots
       - name: publish ParallelDots
         id: publish_nuget_paralleldots
         uses: rohith/publish-nuget@v2

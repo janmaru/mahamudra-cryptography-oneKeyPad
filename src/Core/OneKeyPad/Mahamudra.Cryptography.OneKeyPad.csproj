@@ -1,34 +1,38 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk"> 
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+		<RootNamespace>Mahamudra.Cryptography.OneKeyPad</RootNamespace>
+		<AssemblyName>Mahamudra.Cryptography.OneKeyPad</AssemblyName>
+		<Authors>marujan</Authors>
+		<Company>Mahamudra</Company>
+		<Description>One-time pad (OTP) Library</Description>
+		<PackageId>Mahamudra.Cryptography.OneKeyPad</PackageId>
+		<Product>Mahamudra Cryptography OneKeyPad</Product>
+		<PackageIcon>lotus-flower.png</PackageIcon>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/janmaru/mahamudra-cryptography-oneKeyPad</RepositoryUrl> 
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Mahamudra.Cryptography.OneKeyPad</RootNamespace>
-    <AssemblyName>Mahamudra.Cryptography.OneKeyPad</AssemblyName>
-    <Authors>marujan</Authors>
-    <Company>Mahamudra</Company>
-    <Description>One-time pad (OTP) Library</Description>
-    <PackageId>Mahamudra.Cryptography.OneKeyPad</PackageId>
-    <Product>Mahamudra Cryptography OneKeyPad</Product>
-    <PackageIcon>128_nuget.png</PackageIcon>
-    <PackageIconUrl>http://nuget-janmaru.s3-eu-west-1.amazonaws.com/packets/128_nuget.png</PackageIconUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/janmaru/mahamudra-cryptography-oneKeyPad</RepositoryUrl>
-    <IsPackable>true</IsPackable>
-  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GitVersion.MsBuild" Version="5.8.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+	</ItemGroup> 
 
-  <ItemGroup>
-    <PackageReference Include="GitVersion.MsBuild" Version="5.6.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <None Update="128_nuget.png" Pack="true" PackagePath="">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="lotus-flower.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="lotus-flower.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>

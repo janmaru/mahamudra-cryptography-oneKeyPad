@@ -17,8 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\Core\Additions\Mahamudra.ParallelDots\Mahamudra.ParallelDots.csproj" />
     <ProjectReference Include="..\..\..\..\src\Core\Analyze\Mahamudra.Text.Analysis\Mahamudra.Text.Analysis.csproj" />
-    <ProjectReference Include="..\..\..\..\src\Core\Analyze\Mahamudra.Text.Analyze\Mahamudra.Text.Analysis.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Core\Random\Mahamudra.Cryptography.Random\Mahamudra.Cryptography.Random.csproj" />
   </ItemGroup>
 
   <ItemGroup>

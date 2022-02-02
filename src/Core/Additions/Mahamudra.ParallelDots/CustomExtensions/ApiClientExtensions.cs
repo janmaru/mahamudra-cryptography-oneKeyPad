@@ -38,17 +38,17 @@ namespace Mahamudra.ParallelDots.CustomExtensions
             var myServiceUri = new Uri(serviceUri).ToString(); //throws exception if not well formed
             var client = new RestClient(myServiceUri);
             var request = AddParameters(apiClientSettings);
-            IRestResponse response = await client.ExecuteAsync(request);
+            RestResponse response = await client.ExecuteAsync(request);
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 return response.Content.ToString();
             else
                 throw new Exception($"Error call {myServiceUri} with code {response.StatusCode}");
         }
 
-        private static IRestRequest AddParameters(ApiClientSettings
+        private static RestRequest AddParameters(ApiClientSettings
             apiClientSettings)
         {
-            var request = new RestRequest(Method.POST)
+            var request = new RestRequest(string.Empty, Method.Post)
                 .AddParameter("api_key", apiClientSettings.ApiKey)
                 .AddHeader("cache-control", "no-cache")
                 .AddHeader("source", "c#wrapper")
